@@ -25,7 +25,10 @@ namespace FileTools
             try
             {
                 if (!File.Exists(file1) || !File.Exists(file2))
-                    return false; // TODO : 信息提示
+                {
+                    Console.WriteLine("file not exist");
+                    return false;
+                }
 
                 IList<MemoryStream> memoryStreams = new List<MemoryStream>();
                 memoryStreams.Add(GetFileInfoStream(file1, file2));
