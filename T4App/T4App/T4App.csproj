@@ -60,21 +60,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1.txt">
-      <DependentUpon>MultiOutput.tt</DependentUpon>
-    </Content>
-    <Content Include="2.txt">
-      <DependentUpon>MultiOutput.tt</DependentUpon>
-    </Content>
-    <Content Include="3.txt">
-      <DependentUpon>MultiOutput.tt</DependentUpon>
-    </Content>
-    <Content Include="4.txt">
-      <DependentUpon>MultiOutput.tt</DependentUpon>
-    </Content>
-    <Content Include="5.txt">
-      <DependentUpon>MultiOutput.tt</DependentUpon>
-    </Content>
     <Content Include="MultiManager.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MultiManager.cs</LastGenOutput>
