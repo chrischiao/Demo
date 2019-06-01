@@ -1,0 +1,24 @@
+﻿<#@ template language="C#" hostspecific="True"#>  
+<#@ include file="MultiManager.tt"#> 
+<#  var manager = Manager.Create(Host, GenerationEnvironment); #>  
+
+<# manager.StartHeader(); #>
+ //大家共有的头部信息
+<# manager.EndBlock(); #>
+
+<#
+for(int i=1;i<=5;i++)
+      {
+#>
+<#  manager.StartNewFile(i + ".txt"); #>  
+ <#=i #> //要输入的内容
+<# manager.EndBlock(); #>  
+<#
+    }
+#>
+
+<# manager.StartFooter(); #>
+ // 大家共有的尾部信息
+<# manager.EndBlock(); #>
+
+<# manager.Process(true); #> 

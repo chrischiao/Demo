@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="BtnBackgroundColor">#A5D6A7</Color>
+    <Color x:Key="BtntForegroundColor">white</Color>
+
+    <Color x:Key="PrimaryColor">#A5D6A7</Color>
+    <Color x:Key="DarkPrimaryColor">#4CAF50</Color>
+
+    <Color x:Key="PrimaryTextColor">#212121</Color>
+
+    <Color x:Key="WinBackgroundColor">#d9ead3</Color>
+
+</ResourceDictionary>
