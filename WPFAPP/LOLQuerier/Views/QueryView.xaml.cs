@@ -28,6 +28,10 @@ namespace LOLQuerier.Views
             InitializeComponent();
 
             this.DataContext = viewModel;
+
+            // test
+            viewModel.Region = "NA1";
+            viewModel.SummonerName = "usukhuu"; // N00b lol player
         }
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
@@ -37,11 +41,6 @@ namespace LOLQuerier.Views
 
             if (string.IsNullOrEmpty(viewModel.SummonerName))
                 return;
-
-#if false
-            if (!string.Equals(viewModel.SummonerName, "N00b lol player"))
-                viewModel.SummonerName = "usukhuu";
-#endif
 
             var summonerProfile = viewModel.Query();
             if (summonerProfile != null)

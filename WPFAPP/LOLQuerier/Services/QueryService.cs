@@ -25,5 +25,17 @@ namespace LOLQuerier.Services
 
             return position ?? new PositionDTO();
         }
+
+        public static LeagueEntryDTO GetEntry(SummonerDTO summoner, string region)
+        {
+            LeagueEntryDTO entry = null;
+
+            League_V4 league = new League_V4(region);
+            var list = league.GetEntries(summoner.Id);
+            if (list != null)
+                entry = list.Where(p => p.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
+
+            return entry ?? new LeagueEntryDTO();
+        }
     }
 }

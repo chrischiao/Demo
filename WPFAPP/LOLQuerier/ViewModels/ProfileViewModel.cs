@@ -21,7 +21,7 @@ namespace LOLQuerier.ViewModels
             Rank = rank;
             Wins = wins;
             Losses = losses;
-            Emblem = "/LoLGoal;component/Assets/emblems/Emblem_" + tier + ".png";
+            Emblem = $"/LoLQuerier;component/Assets/emblems/Emblem_{tier}.png";
         }
     }
 }

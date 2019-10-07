@@ -36,5 +36,10 @@ namespace LOLQuerier.Views
         {
             DragMove();
         }
+
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

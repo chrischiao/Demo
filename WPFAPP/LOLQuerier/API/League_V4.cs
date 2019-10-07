@@ -26,5 +26,21 @@ namespace LOLQuerier.API
                 return null;
             }
         }
+
+        public List<LeagueEntryDTO> GetEntries(string summonerId)
+        {
+            string path = "league/v4/entries/by-summoner/" + summonerId;
+
+            var response = GET(GetURI(path));
+            string content = response.Content.ReadAsStringAsync().Result;
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return JsonConvert.DeserializeObject<List<LeagueEntryDTO>>(content);
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

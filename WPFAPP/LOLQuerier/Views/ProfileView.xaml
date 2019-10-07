@@ -5,13 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LOLQuerier.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="600" Width="400" 
+        mc:Ignorable="d" Height="580" Width="360" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" 
         Background="#FF410A66" MouseDown="Window_MouseDown">
     <Grid>
+        <Button HorizontalAlignment="Right" VerticalAlignment="top" Padding="10,0" 
+                Background="Transparent" BorderBrush="Transparent"
+                Click="CloseBtn_Click">
+            <materialDesign:PackIcon Kind="WindowClose" Height="15" Width="15" />
+        </Button>
         <Border Background="White" Margin="20 100 20 20" CornerRadius="15">
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
-                <Border Width="100" Height="100" Margin="20 20 0 10" BorderBrush="Gray" HorizontalAlignment="Left" BorderThickness="1" CornerRadius="15">
+                <Border Width="80" Height="80" Margin="20 20 0 10" BorderBrush="Gray" HorizontalAlignment="Left" BorderThickness="1" CornerRadius="15">
                     <Border.Background>
                         <ImageBrush ImageSource="{Binding Path=Icon}"/>
                     </Border.Background>
@@ -27,23 +32,23 @@
                         <TextBlock Text="{Binding Path=Losses}" FontSize="18" Foreground="Gray" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Margin="30 20">
+                <StackPanel Margin="30">
                     <TextBlock Text="LEVEL" FontSize="15" Foreground="LightGray"/>
                     <TextBlock Text="{Binding Path=Level}" HorizontalAlignment="Center" FontSize="80" Foreground="Gray"/>
                 </StackPanel>
-                <StackPanel Margin="20 10">
+                <StackPanel Margin="20,5">
                     <Button HorizontalAlignment="Right" VerticalAlignment="Center"
                             Click="BackBtn_Click">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ArrowBack" Width="20" Height="20" Margin="3,0" VerticalAlignment="Center"/>
-                            <TextBlock FontSize="15" Margin="5,3">BACK</TextBlock>
+                            <materialDesign:PackIcon Kind="ArrowBack" Width="18" Height="18" VerticalAlignment="Center"/>
+                            <TextBlock FontSize="15" Margin="5,3" VerticalAlignment="Center">BACK</TextBlock>
                         </StackPanel>
                     </Button>
                 </StackPanel>
             </StackPanel>
         </Border>
-        <StackPanel HorizontalAlignment="Right" Margin="30 10">
-            <Image Source="{Binding Path=Emblem}" Width="200" Height="200">
+        <StackPanel HorizontalAlignment="Right" Margin="35 10">
+            <Image Source="{Binding Path=Emblem}" Width="160" Height="160">
                 <Image.Effect>
                     <DropShadowEffect BlurRadius="40" ShadowDepth="1"/>
                 </Image.Effect>

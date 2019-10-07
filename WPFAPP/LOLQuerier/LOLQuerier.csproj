@@ -66,6 +66,7 @@
     <Compile Include="API\Api.cs" />
     <Compile Include="API\League_V4.cs" />
     <Compile Include="API\Summoner_V4.cs" />
+    <Compile Include="Models\LeagueEntryDTO.cs" />
     <Compile Include="Models\PositionDTO.cs" />
     <Compile Include="Models\SummonerDTO.cs" />
     <Compile Include="Services\QueryService.cs" />

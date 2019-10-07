@@ -15,7 +15,6 @@ namespace LOLQuerier.API
 
             var response = GET(GetURI(path));
             string content = response.Content.ReadAsStringAsync().Result;
-
             if(response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 return JsonConvert.DeserializeObject<SummonerDTO>(content);

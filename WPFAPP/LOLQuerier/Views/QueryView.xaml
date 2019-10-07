@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LOLQuerier.Views"
        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="500" Width="320" 
+        mc:Ignorable="d" Height="460" Width="300" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" 
         Background="#FF410A66" MouseDown="Window_MouseDown">
     <Grid>
@@ -14,7 +14,7 @@
                 Click="CloseBtn_Click">
             <materialDesign:PackIcon Kind="WindowClose" Height="15" Width="15" />
         </Button>
-        <StackPanel Margin="36">
+        <StackPanel Margin="30">
             <Image Source="/Assets/logo.png" Width="96" Height="96"/>
             <Border Background="White" Margin="0,20" CornerRadius="5">
                 <StackPanel Margin="15">
@@ -37,9 +37,9 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30"
                                 Click="SearchBtn_Click">
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Search" Width="20" Height="20" Margin="3,0" VerticalAlignment="Center"/>
-                                <TextBlock FontSize="15" Margin="5,3">SEARCH</TextBlock>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Search" Width="18" Height="18" VerticalAlignment="Center"/>
+                                <TextBlock FontSize="15" Margin="5,3" VerticalAlignment="Center">SEARCH</TextBlock>
                             </StackPanel>
                         </Button>
                     </StackPanel>

@@ -36,9 +36,9 @@ namespace LOLQuerier.ViewModels
             var summoner = QueryService.GetSummoner(Region, SummonerName);
             if (summoner != null)
             {
-                var position = QueryService.GetPosition(summoner, Region);
-                return new ProfileViewModel(summoner.Name, summoner.ProfileIconId, summoner.SummonerLevel, position.Tier, position.Rank,
-                position.Wins, position.Losses);
+                var entry = QueryService.GetEntry(summoner, Region);
+                return new ProfileViewModel(summoner.Name, summoner.ProfileIconId, summoner.SummonerLevel, entry.Tier, entry.Rank,
+                entry.Wins, entry.Losses);
             }
             return null;
         }
